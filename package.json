@@ -34,8 +34,8 @@
     "copy-files": "copyfiles -u 1 src/**/*.css dist/"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "7.3.2",
