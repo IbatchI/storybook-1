@@ -69,5 +69,8 @@
     "@semantic-release/github",
     "@semantic-release/npm",
     "@semantic-release/git"
-  ]
+  ],
+  "resolutions": {
+    "string-width": "^4"
+  }
 }
