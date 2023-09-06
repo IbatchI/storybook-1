@@ -16,8 +16,7 @@
   "release": {
     "branches": [
       "main",
-      "test",
-      "dev"
+      "next"
     ]
   },
   "files": [
