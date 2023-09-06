@@ -24,8 +24,8 @@
   ],
   "type": "module",
   "scripts": {
-    "dev": "yarn storybook",
-    "build": "yarn clean && tsc && yarn copy-files",
+    "dev": "pnpm storybook",
+    "build": "pnpm clean && tsc && pnpm copy-files",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -43,6 +43,7 @@
     "@storybook/addon-links": "7.3.2",
     "@storybook/addon-onboarding": "1.0.8",
     "@storybook/blocks": "7.3.2",
+    "@storybook/builder-vite": "^7.4.0",
     "@storybook/react": "7.3.2",
     "@storybook/react-vite": "7.3.2",
     "@storybook/testing-library": "0.2.0",

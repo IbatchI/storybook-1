@@ -13,16 +13,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
-
+          cache: "pnpm"
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: Build App
-        run: yarn build
+        run: pnpm build
 
       - name: Semantic Release
         env:
