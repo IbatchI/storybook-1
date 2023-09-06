@@ -15,8 +15,7 @@
   },
   "release": {
     "branches": [
-      "main",
-      "next"
+      "main"
     ]
   },
   "files": [
