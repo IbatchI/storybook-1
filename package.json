@@ -15,7 +15,9 @@
   },
   "Realease": {
     "branches": [
-      "main"
+      "main",
+      "test",
+      "dev"
     ]
   },
   "files": [
