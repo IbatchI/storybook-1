@@ -1,49 +1,45 @@
-import './button.css';
+import type { ButtonHTMLAttributes, ReactNode } from 'react'
+import { Button as BsButton } from 'react-bootstrap'
 
-export interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
+import { concat } from '../../utils/functionUtils'
+import { ButtonVariant } from './buttonTypes'
+
+import './button.scss'
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  className?: string
+  children: ReactNode
+  disabled?: boolean
+  onClick: () => void
+  variant?: ButtonVariant
+  width?: string | number
 }
 
-/**
- * Primary UI component for user interaction
- */
 export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
+  children,
+  className,
+  disabled,
+  type = 'button',
+  variant = 'primary',
+  onClick,
+  style,
+  width,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+    <BsButton
+      type={type}
+      className={concat('button', className)}
+      variant={variant}
+      onClick={onClick}
+      disabled={disabled}
+      style={{
+        width,
+        ...style,
+      }}
       {...props}
     >
-      {label}
-    </button>
-  );
-};
-
-export default Button;
+      {children}
+    </BsButton>
+  )
+}

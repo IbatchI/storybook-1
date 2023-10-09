@@ -1,0 +1,24 @@
+.button {
+  padding: 9px 0;
+  font-size: 14px;
+  font-weight: 600;
+
+  .btn {
+    &.btn-danger:focus,
+    &.btn-success:focus {
+      color: $white;
+    }
+    &.btn-white {
+      background-color: $white;
+    }
+    &.btn-light-gray {
+      background-color: $light-300;
+    }
+    &.btn-violet {
+      @include button-variant($violet-700, darken($violet-700, 7.5%), $white);
+    }
+    &.btn-outline-violet {
+      @include button-outline-variant($violet-700, $white);
+    }
+  }
+}
