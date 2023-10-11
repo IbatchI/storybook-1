@@ -1,0 +1,47 @@
+// Theme
+$black: #000;
+$white: #ffffff;
+
+$light-300: #f7f7f7;
+$light-500: #e9ecef;
+$light-700: #e0e0e0;
+$ligth-900: #dddddd;
+
+$secondary-300: rgba(161, 161, 161, 1);
+$secondary-500: #999999;
+$secondary-600: #797979;
+$secondary-700: #575757;
+$secondary-900: #2f2f2f;
+
+$primary-300: #159ad8;
+$primary-500: #3865b8;
+$primary-700: #0063bd;
+
+$warning-100: #ffc107;
+$warning-300: #fbc024;
+$warning-500: #ff973d;
+$warning-700: #ff7600;
+
+$error-300: #ff6666;
+$error-500: #dc3545;
+
+$success-500: #4ad295;
+$success-700: #219e66;
+
+$violet-700: #4c04aa;
+
+// Border
+$border-primary: 2px solid $primary-700;
+$border-secondary: 2px solid $secondary-300;
+
+// Fonts
+$font-small: 13px;
+$font-primary: 14px;
+$font-secondary: 10px;
+$font-title: 20px;
+$font-family: 'Open Sans', sans-serif;
+
+// Shadows
+$vertical-tall-container: 0px 5px 10px #00000029;
+$horizontal-short-container: 0px 5px 10px #00000029;
+$content-card-botom: 0px 20px 40px -25px rgba(0, 0, 0, 50%);
