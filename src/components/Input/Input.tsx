@@ -1,11 +1,11 @@
+import type { ReactElement } from 'react'
 import { useFormikContext } from 'formik'
-import { Form, type FormControlProps, InputGroup } from 'react-bootstrap'
+import { type FormControlProps, Form, InputGroup } from 'react-bootstrap'
 
 import { concat } from '../../utils/functionUtils'
 import { blockInvalidCharacters } from './inputUtils'
 
 import './input.scss'
-import { ReactElement } from 'react'
 
 export interface InputProps extends FormControlProps {
   name: string
@@ -79,7 +79,7 @@ export const Input = ({
 
         {icon && (
           <button
-            className={concat('input-icon', `text-${textVariant}`)}
+            className={concat('btn-input-icon', `text-${textVariant}`)}
             disabled={isDisabledIcon}
             onClick={handleClickOnIcon}
             style={{

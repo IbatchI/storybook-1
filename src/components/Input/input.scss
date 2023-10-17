@@ -11,6 +11,10 @@
     color: $text-color;
     font-weight: 600;
   }
+
+  & ~ .btn-input-icon {
+    color: $text-color;
+  }
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -51,6 +55,7 @@ input[type='number'] {
 
   /* Input tag */
   .custom-input {
+    position: relative;
     height: 38px;
     background-color: #fff;
     font-size: 13px;
@@ -80,5 +85,17 @@ input[type='number'] {
         box-shadow: none;
       }
     }
+  }
+
+  .btn-input-icon {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    right: 10px;
+    background-color: transparent;
+    border: none;
   }
 }

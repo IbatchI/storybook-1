@@ -1,6 +1,7 @@
 import { Form, Formik } from 'formik'
-
+import { AiFillWarning } from 'react-icons/ai'
 import type { Meta, StoryObj } from '@storybook/react'
+
 import { Input } from '../components/Input/Input'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -66,5 +67,15 @@ export const Invalid: Story = {
     placeholder: 'Invalid Input',
     isInvalid: true,
     error: 'This is an error message',
+  },
+}
+
+export const WithIcon: Story = {
+  render: (args) => <Template {...args} />,
+  args: {
+    name: 'withIcon',
+    label: 'Input with Icon',
+    placeholder: 'Input with Icon',
+    icon: <AiFillWarning />,
   },
 }
