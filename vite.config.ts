@@ -9,6 +9,7 @@ export default defineConfig({
       scss: {
         additionalData: `
           @import "../node_modules/bootstrap/scss/bootstrap";
+          @import "./src/styles/_bsOverride.scss";
           @import "./src/styles/_variables.scss";
         `,
       },
