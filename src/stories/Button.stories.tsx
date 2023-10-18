@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Button } from '../components/Button/Button'
 import { BsTrash } from 'react-icons/bs'
+import { createSelectOptions } from '../utils/storybookUtils'
+import { allButtonVariants } from '../components/Button/buttonTypes'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -14,10 +16,21 @@ const meta = {
   tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
+    children: {
+      control: {
+        type: 'text',
+      },
+    },
     style: {
       control: {
         type: 'object',
       },
+    },
+    variant: {
+      control: {
+        type: 'select',
+      },
+      options: createSelectOptions(allButtonVariants),
     },
   },
 } satisfies Meta<typeof Button>

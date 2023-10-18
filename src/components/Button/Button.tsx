@@ -2,7 +2,7 @@ import type { ButtonHTMLAttributes, ReactNode } from 'react'
 import { Button as BsButton } from 'react-bootstrap'
 
 import { concat } from '../../utils/functionUtils'
-import type { ButtonVariant } from './buttonTypes'
+import { ButtonVariant } from './buttonTypes'
 
 import './button.scss'
 
