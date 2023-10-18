@@ -33,3 +33,4 @@ export const COLORS = {
 } as const
 
 export type ColorVariant = keyof typeof COLORS
+export type Colors = (typeof COLORS)[ColorVariant]
