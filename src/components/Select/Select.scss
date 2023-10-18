@@ -1,0 +1,37 @@
+.custom-select-container {
+  .control {
+    border-color: $primary-500;
+    outline: 0 !important;
+    box-shadow: 0 0 0 0.25rem rgba(141, 151, 167, 0.25);
+    color: black;
+    padding: 1px 10px;
+  }
+
+  .dropdown-btn {
+    color: $primary-500;
+  }
+
+  .placeholder {
+    padding: 1px 10px;
+    font-weight: bold;
+    background-color: transparent;
+    &:hover {
+      cursor: auto;
+    }
+  }
+
+  .multivalue {
+    background-color: $light-300;
+    color: $secondary-900;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 1px 4px;
+    padding: 1px 2px;
+  }
+
+  .multivalue-remove {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}

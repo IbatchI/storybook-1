@@ -3,7 +3,7 @@
   font-size: 14px;
   font-weight: 600;
 
-  .btn {
+  &.btn {
     &.btn-danger:focus,
     &.btn-success:focus {
       color: $white;

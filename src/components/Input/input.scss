@@ -1,0 +1,101 @@
+/* MIXIN UTILS */
+@mixin bgVariant($bg-color, $text-color) {
+  border: none;
+  border-color: transparent;
+  background-color: $bg-color;
+  box-shadow: none;
+  color: $text-color;
+  font-weight: 600;
+
+  &::placeholder {
+    color: $text-color;
+    font-weight: 600;
+  }
+
+  & ~ .btn-input-icon {
+    color: $text-color;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.input-container {
+  /* Create classes text-blue, text-green, etc. Based in textVariant prop */
+  $text-variants: (
+    'blue': $primary-300,
+    'green': $success-700,
+    'black': $secondary-900,
+    'red': $error-500,
+    'white': $white,
+    'grey': $secondary-500,
+  );
+
+  @each $variant, $color in $text-variants {
+    .text-#{$variant} {
+      color: $color !important;
+      font-weight: 600;
+
+      &:focus,
+      &::placeholder {
+        color: $color !important;
+      }
+    }
+  }
+
+  /* Input tag */
+  .custom-input {
+    position: relative;
+    height: 38px;
+    background-color: #fff;
+    font-size: 13px;
+
+    /* Based in bgVariant prop */
+    &.bg-blue {
+      @include bgVariant($primary-300, $white);
+    }
+
+    &.bg-green {
+      @include bgVariant($success-700, $white);
+    }
+
+    &.bg-grey {
+      @include bgVariant($secondary-500, $light-900);
+    }
+
+    /* Based in borderVariant prop */
+    &.border-transparent {
+      border: none;
+      box-shadow: none;
+
+      &:focus,
+      &:active,
+      &:disabled {
+        border: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .btn-input-icon {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+  }
+}
