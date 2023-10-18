@@ -1,7 +1,7 @@
 /**
  * Concat classNames
  * Accept any string and validations as `value && 'class'`
-*/
+ */
 export const concat = (...classNames: (string | boolean | undefined)[]) => {
   return classNames.filter((cn) => !!cn).join(' ')
 }
@@ -9,7 +9,7 @@ export const concat = (...classNames: (string | boolean | undefined)[]) => {
 /**
  * Draw a dot before the rest of the content
  * Accept colors
-*/
+ */
 
 export const dot = ({ color = 'transparent' }) => ({
   alignItems: 'center',
