@@ -1,4 +1,5 @@
 import { Badge } from 'react-bootstrap'
+import type { Color } from 'react-bootstrap/esm/types'
 
 import { concat } from '../../utils/functionUtils'
 import { PillState, PillVariant } from './PillTypes'
@@ -35,7 +36,7 @@ export const Pill = ({
           width: width,
           height: height,
         }}
-        text={textVariant}
+        text={textVariant as Color}
       >
         {label}
       </Badge>
