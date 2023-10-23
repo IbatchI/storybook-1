@@ -1,1 +1,6 @@
-export { Button } from './components/Button/Button';
+export { Button } from './components/Button/Button'
+export { GenericSelect } from './components/Select/Select'
+export { Icon } from './components/Icon/Icon'
+export { Input } from './components/Input/Input'
+export { Pill } from './components/Pill/Pill'
+export { Tooltip } from './components/Tooltip/Tooltip'
