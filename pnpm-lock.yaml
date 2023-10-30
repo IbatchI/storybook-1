@@ -3328,8 +3328,7 @@ packages:
       - '@types/react'
       - '@types/react-dom'
     dev: true
-
-  /@storybook/addon-toolbars@7.3.2(@types/react-dom@18.2.7)(@types/react@18.2.15)(react-dom@18.2.0)(react@18.2.0):
+  /@storybook/addon-toolbars@7.3.2(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-hd+5Ax7p3vmsNNuO3t4pcmB2pxp58i9k12ygD66NLChSNafHxediLqdYJDTRuono2No1InV1HMZghlXXucCCHQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -10006,10 +10005,8 @@ packages:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
-    dev: true
-
-  /semantic-release@21.0.9(typescript@5.0.2):
-    resolution: {integrity: sha512-EnylO0+UcKbVFaHeMbCjJpxqpgJPnze4zoOwmj34Kv4GnuyTV9MkNKrwmdZPFbmom9PpMj+9JN/8eyZzKkKyZQ==}
+  /semantic-release@21.1.1(typescript@5.2.2):
+    resolution: {integrity: sha512-OCIazQnaCHdq1F6zfmKS0P7jZakYq0weiqW2mxUWo4H2CDnxelUoa/0Bs/dQatoHc6JFh6lG2HWpusdl93bFcw==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
