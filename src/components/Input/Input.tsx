@@ -1,5 +1,4 @@
 import type { ReactElement } from 'react'
-import { useFormikContext } from 'formik'
 import { type FormControlProps, Form, InputGroup } from 'react-bootstrap'
 
 import { concat } from '../../utils/functionUtils'
@@ -29,7 +28,6 @@ export const Input = ({
   className,
   name,
   type,
-  value,
   label,
   error,
   isInvalid,
@@ -46,10 +44,6 @@ export const Input = ({
   iconSize,
   ...inputProps
 }: InputProps) => {
-  const { values, errors, handleChange, handleBlur } = useFormikContext<
-    Record<string, string>
-  >() ?? { values: {} }
-
   return (
     <div className={concat('input-container', className)}>
       {label && <Form.Label>{label}</Form.Label>}
@@ -64,10 +58,7 @@ export const Input = ({
             `text-${textVariant}`,
           )}
           autoComplete='off'
-          value={value ?? values[name]}
-          onChange={inputProps.onChange ?? handleChange}
-          onBlur={inputProps.onBlur ?? handleBlur}
-          isInvalid={isInvalid ?? !!errors[name]}
+          isInvalid={isInvalid}
           onKeyDown={type === 'number' ? blockInvalidCharacters(isDecimal) : undefined}
           type={type}
           maxLength={maxLength}
@@ -76,7 +67,6 @@ export const Input = ({
           {...inputProps}
         />
         <Form.Control.Feedback type='invalid'>{error}</Form.Control.Feedback>
-
         {icon && (
           <button
             className={concat('btn-input-icon', `text-${textVariant}`)}
@@ -89,6 +79,7 @@ export const Input = ({
             {icon}
           </button>
         )}
+        <div></div>
       </InputGroup>
     </div>
   )

@@ -58,7 +58,11 @@ input[type='number'] {
     position: relative;
     height: 38px;
     background-color: #fff;
-    font-size: 13px;
+    font-size: 1rem;
+    font-weight: 600;
+    //  This important  it's because with the icon we have a selector how
+    //  overwrite the border radius of the input
+    border-radius: var(--bs-border-radius) !important;
 
     /* Based in bgVariant prop */
     &.bg-blue {
@@ -92,10 +96,10 @@ input[type='number'] {
     position: absolute;
     height: 100%;
     align-items: center;
-    padding: 0;
     margin: 0;
     right: 10px;
     background-color: transparent;
     border: none;
+    z-index: 6;
   }
 }

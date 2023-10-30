@@ -1,4 +1,3 @@
-import { Form, Formik } from 'formik'
 import { AiFillWarning } from 'react-icons/ai'
 import type { Meta, StoryObj } from '@storybook/react'
 
@@ -22,26 +21,9 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-type InputProps = Parameters<typeof Input>[0]
-
-const Template = (args: InputProps) => {
-  return (
-    <Formik
-      initialValues={{
-        [args.name]: '',
-      }}
-      onSubmit={(values) => console.log(values)}
-    >
-      <Form>
-        <Input {...args} />
-      </Form>
-    </Formik>
-  )
-}
-
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Text: Story = {
-  render: (args) => <Template {...args} />,
+  render: (args) => <Input {...args} />,
   args: {
     name: 'text',
     label: 'Text Input',
@@ -50,7 +32,7 @@ export const Text: Story = {
 }
 
 export const Number: Story = {
-  render: (args) => <Template {...args} />,
+  render: (args) => <Input {...args} />,
   args: {
     name: 'number',
     label: 'Number Input',
@@ -60,7 +42,7 @@ export const Number: Story = {
 }
 
 export const Invalid: Story = {
-  render: (args) => <Template {...args} />,
+  render: (args) => <Input {...args} />,
   args: {
     name: 'invalid',
     label: 'Invalid Input',
@@ -71,10 +53,11 @@ export const Invalid: Story = {
 }
 
 export const WithIcon: Story = {
-  render: (args) => <Template {...args} />,
+  render: (args) => <Input {...args} />,
   args: {
     name: 'withIcon',
     label: 'Input with Icon',
+    textVariant: 'blue',
     placeholder: 'Input with Icon',
     icon: <AiFillWarning />,
   },
