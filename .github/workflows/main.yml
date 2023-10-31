@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  Build:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -26,30 +26,6 @@ jobs:
 
       - name: Build App
         run: pnpm build
-      - name: Listar archivos en la carpeta dist
-        run: |
-          ls dist/components
-
-  Deploy:
-    runs-on: ubuntu-latest
-    needs: [Build]
-    steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: 'pnpm'
-      - name: Install dependencies
-        run: pnpm install
-      - name: Build App
-        run: pnpm build
-      - name: Listar archivos en la carpeta dist
-        run: |
-          ls dist/components
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_STORYBOOK_ACCESSTOKEN }}
