@@ -11,7 +11,11 @@
   },
   "peerDependencies": {
     "react": ">=16",
-    "react-dom": ">=16"
+    "react-dom": ">=16",
+    "bootstrap": "5.3.2",
+    "react-bootstrap": "2.9.0",
+    "react-icons": "4.11.0",
+    "react-select": "5.7.7"
   },
   "release": {
     "branches": [
