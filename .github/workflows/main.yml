@@ -28,7 +28,7 @@ jobs:
         run: pnpm build
       - name: Listar archivos en la carpeta dist
         run: |
-          ls dist
+          ls dist/components
 
   Deploy:
     runs-on: ubuntu-latest
@@ -45,6 +45,11 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
+      - name: Build App
+        run: pnpm build
+      - name: Listar archivos en la carpeta dist
+        run: |
+          ls dist/components
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_STORYBOOK_ACCESSTOKEN }}
