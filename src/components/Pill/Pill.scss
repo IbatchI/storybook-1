@@ -1,5 +1,3 @@
-@use '../../styles/variables';
-
 @mixin badgeVariant($size, $color, $top-offset, $right-offset: null) {
   position: absolute;
   top: $top-offset;
