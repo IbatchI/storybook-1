@@ -1,3 +1,5 @@
+@use '_variables.scss';
+
 /* MIXIN UTILS */
 @mixin bgVariant($bg-color, $text-color) {
   border: none;

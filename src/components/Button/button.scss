@@ -1,3 +1,5 @@
+@use '_variables.scss';
+
 .button {
   padding: 9px 0;
   font-size: 14px;
@@ -15,10 +17,10 @@
       background-color: $light-300;
     }
     &.btn-violet {
-      @include button-variant($violet-700, darken($violet-700, 7.5%), $white);
+        @include button-variant($violet-700, darken($violet-700, 7.5%), $white);
     }
     &.btn-outline-violet {
-      @include button-outline-variant($violet-700, $white);
+        @include button-outline-variant($violet-700, $white);
     }
   }
 }
