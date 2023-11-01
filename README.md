@@ -18,7 +18,7 @@ pnpm install lh-my-first-storybook
 
 In your vite.config.ts add this code:
 
-```javascript
+```js
 export default defineConfig({
   plugins: [react()],
   css: {
@@ -26,11 +26,15 @@ export default defineConfig({
       scss: {
         additionalData: `
           @import "../node_modules/bootstrap/scss/bootstrap";
-          @import "./src/styles/_bsOverride.scss";
-          @import "./src/styles/_variables.scss";
+          @import "../node_modules/lh-my-first-storybook/dist/styles/_variables.scss";
+          @import "../node_modules/lh-my-first-storybook/dist/styles/_bsOverride.scss";
         `,
       },
     },
   },
 })
 ```
+
+### We strongly recommend install the following extensions
+
+- [Intelligent scss](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss)
