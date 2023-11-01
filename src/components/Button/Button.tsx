@@ -10,7 +10,6 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string
   children: ReactNode
   disabled?: boolean
-  onClick?: () => void
   variant?: ButtonVariant
   width?: string | number
 }
@@ -21,7 +20,6 @@ export const Button = ({
   disabled,
   type = 'button',
   variant = 'primary',
-  onClick,
   style,
   width,
   ...props
@@ -31,7 +29,6 @@ export const Button = ({
       type={type}
       className={concat('button', className)}
       variant={variant}
-      onClick={onClick}
       disabled={disabled}
       style={{
         width,
