@@ -11,28 +11,18 @@ yarn add lh-my-first-storybook
 ```
 
 ```
-pnpm install lh-my-first-storybook
+pnpm add lh-my-first-storybook
 ```
 
 # Acces to variables
 
-In your vite.config.ts add this code:
+In your index.scss add this code:
+That it's for import the common variables and the boostrap override variables
 
-```js
-export default defineConfig({
-  plugins: [react()],
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `
-          @import "../node_modules/bootstrap/scss/bootstrap";
-          @import "../node_modules/lh-my-first-storybook/dist/styles/_variables.scss";
-          @import "../node_modules/lh-my-first-storybook/dist/styles/_bsOverride.scss";
-        `,
-      },
-    },
-  },
-})
+```scss
+@import "~node_modules/bootstrap/scss/bootstrap";
+@import "~node_modules/lh-my-first-storybook/dist/styles/_variables.scss";
+@import "~node_modules/lh-my-first-storybook/dist/styles/_bsOverride.scss";
 ```
 
 ### We strongly recommend install the following extensions
