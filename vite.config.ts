@@ -21,8 +21,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'Carousel',
-      fileName: 'react-carousel',
+      name: 'UI Kit',
+      fileName: 'index',
     },
     rollupOptions: {
       external: ['react'],

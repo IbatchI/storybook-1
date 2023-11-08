@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "license": "MIT",
   "typings": "dist/index.d.ts",
-  "main": "dist/index.js",
+  "main": "dist/index.umd.cjs",
+  "module": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/IbatchI/storybook-1.git"
