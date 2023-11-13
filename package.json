@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "typings": "dist/index.d.ts",
-  "main": "dist/index.umd.cjs",
+  "main": "dist/index.js",
   "module": "dist/index.js",
   "repository": {
     "type": "git",
@@ -29,14 +29,13 @@
   "type": "module",
   "scripts": {
     "dev": "pnpm storybook",
-    "build": "pnpm clean && vite build",
-    "build2": "pnpm clean && tsc && pnpm copy-files",
+    "build": "pnpm clean && tsc && vite build && pnpm copy-files",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "clean": "rimraf dist/",
-    "copy-files": "copyfiles -u 1 \"src/**/*.scss\" dist/",
+    "copy-files": "copyfiles -u 1 \"src/styles/_variables.scss\" dist/",
     "lint:fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx,.cjs,.mjs",
     "format": "prettier . --check",
     "format:fix": "prettier . --write",
@@ -69,8 +68,9 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-react-refresh": "0.4.3",
     "eslint-plugin-storybook": "0.6.13",
+    "glob": "10.3.10",
     "husky": "8.0.3",
-    "path": "^0.12.7",
+    "path": "0.12.7",
     "prettier": "3.0.3",
     "react": ">=16",
     "react-bootstrap": "2.9.0",
@@ -83,8 +83,8 @@
     "storybook": "7.3.2",
     "typescript": "5.0.2",
     "vite": "4.4.5",
-    "vite-plugin-css-injected-by-js": "^3.3.0",
-    "vite-plugin-dts": "^3.6.3"
+    "vite-plugin-css-injected-by-js": "3.3.0",
+    "vite-plugin-dts": "3.6.3"
   },
   "plugins": [
     "@semantic-release/commit-analyzer",
