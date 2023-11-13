@@ -16,11 +16,20 @@ pnpm add lh-my-first-storybook
 
 # Acces to variables
 
-In your index.scss add this code:
+In your vite.config.ts add this code:
 That it's for import the common variables and the boostrap override variables
 
-```scss
-@import '~node_modules/lh-my-first-storybook/dist/styles/_variables.scss';
+```js
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import "../node_modules/bootstrap/scss/bootstrap";
+          @import '../node_modules/lh-my-first-storybook/dist/styles/_variables.scss';
+        `,
+      },
+    },
+  },
 ```
 
 ### We strongly recommend install the following extensions
