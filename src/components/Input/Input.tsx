@@ -14,7 +14,7 @@ export interface InputProps extends FormControlProps {
   bgVariant?: 'default' | 'blue' | 'green' | 'grey'
   borderVariant?: 'default' | 'transparent'
   textVariant?: 'default' | 'blue' | 'green' | 'black' | 'red' | 'white' | 'grey'
-  width?: string | number
+  width?: string
   maxLength?: number
   max?: number
   min?: number
@@ -42,10 +42,11 @@ export const Input = ({
   isDisabledIcon,
   textVariant,
   iconSize,
+  width,
   ...inputProps
 }: InputProps) => {
   return (
-    <div className={concat('input-container', className)}>
+    <div className={concat('input-container', className)} style={{ width }}>
       {label && <Form.Label>{label}</Form.Label>}
 
       <InputGroup hasValidation>
