@@ -20,9 +20,7 @@ In your index.scss add this code:
 That it's for import the common variables and the boostrap override variables
 
 ```scss
-@import "~node_modules/bootstrap/scss/bootstrap";
-@import "~node_modules/lh-my-first-storybook/dist/styles/_variables.scss";
-@import "~node_modules/lh-my-first-storybook/dist/styles/_bsOverride.scss";
+@import '~node_modules/lh-my-first-storybook/dist/styles/_variables.scss';
 ```
 
 ### We strongly recommend install the following extensions
