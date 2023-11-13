@@ -33,7 +33,6 @@ export default defineConfig({
         'react/jsx-runtime',
         'boostrap',
         'react-boostrap',
-        'react-select',
         'react-icons',
       ],
       input: Object.fromEntries(
