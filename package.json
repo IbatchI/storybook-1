@@ -29,13 +29,13 @@
   "type": "module",
   "scripts": {
     "dev": "pnpm storybook",
-    "build": "pnpm clean && tsc && vite build && pnpm copy-files",
+    "build": "pnpm clean && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "stoybook build",
     "clean": "rimraf dist/",
-    "copy-files": "copyfiles -u 1 \"src/styles/_variables.scss\" dist/",
+    "copy-files": "copyfiles -u 1 \"src/**/*.scss\" dist/",
     "lint:fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx,.cjs,.mjs",
     "format": "prettier . --check",
     "format:fix": "prettier . --write",
@@ -83,7 +83,6 @@
     "storybook": "7.3.2",
     "typescript": "5.0.2",
     "vite": "4.4.5",
-    "vite-plugin-css-injected-by-js": "3.3.0",
     "vite-plugin-dts": "3.6.3"
   },
   "plugins": [
