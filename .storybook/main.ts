@@ -19,11 +19,5 @@ const config: StorybookConfig = {
   core: {
     builder: '@storybook/builder-vite', // 👈 The builder enabled here.
   },
-  viteFinal: async (config) => {
-    return {
-      ...config,
-      plugins: await withoutVitePlugins(config.plugins, ['vite:lib-inject-css']),
-    }
-  },
 }
 export default config
