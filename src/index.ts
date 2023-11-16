@@ -1,3 +1,4 @@
+import './styles/index.scss'
 export { Button } from './components/Button/Button'
 export { GenericSelect } from './components/Select/Select'
 export { Icon } from './components/Icon/Icon'
